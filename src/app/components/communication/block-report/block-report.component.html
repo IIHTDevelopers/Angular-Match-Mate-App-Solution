@@ -1,0 +1,16 @@
+<div class="block-report-container">
+    <h2>Blocked Users</h2>
+    <div class="users-list">
+        <h3>Blocked Users</h3>
+        <ul>
+            <li *ngFor="let user of users" (click)="selectUser(user)" [class.selected]="user.id === selectedUserId">
+                {{ user.name }}
+            </li>
+        </ul>
+    </div>
+    <div class="actions" *ngIf="selectedUserId">
+        <h3>Actions for {{ selectedUserName }}</h3>
+        <button (click)="unblockUser()">Unblock User</button>
+        <button (click)="reportUser()">Report User</button>
+    </div>
+</div>

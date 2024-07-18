@@ -1,0 +1,40 @@
+<div class="basic-search-container">
+    <h2>Basic Search</h2>
+    <form (ngSubmit)="onSearch()" [formGroup]="searchForm">
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" formControlName="age">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" formControlName="gender">
+                <option value="" disabled>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" formControlName="location">
+        </div>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="search-results" *ngIf="searchResults.length > 0">
+        <h3>Search Results</h3>
+        <div *ngFor="let result of searchResults" class="search-result-card">
+            <h4>{{ result.name }}</h4>
+            <p>Age: {{ result.age }}</p>
+            <p>Gender: {{ result.gender }}</p>
+            <p>Location: {{ result.location }}</p>
+        </div>
+    </div>
+
+    <div *ngIf="searchResults.length === 0 && submitted">
+        <p>No profiles match your search criteria.</p>
+    </div>
+</div>

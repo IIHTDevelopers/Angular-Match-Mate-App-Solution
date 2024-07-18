@@ -1,0 +1,41 @@
+<div class="profile-container">
+    <h2>User Profile</h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]="profileForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" formControlName="name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" formControlName="email" [disabled]="true">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" formControlName="age">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" formControlName="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" formControlName="location">
+        </div>
+
+        <div *ngIf="isEditMode">
+            <button type="submit" [disabled]="!profileForm.valid">Update Profile</button>
+            <button type="button" (click)="disableEdit()">Cancel</button>
+        </div>
+        <div *ngIf="!isEditMode">
+            <button type="button" (click)="enableEdit()">Edit</button>
+        </div>
+    </form>
+</div>

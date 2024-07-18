@@ -1,0 +1,30 @@
+<div class="interests-container">
+    <h2>Manage Interests</h2>
+    <div class="sent-interests">
+        <h3>Sent Interests</h3>
+        <div *ngIf="sentInterests.length > 0; else noSentInterests">
+            <div *ngFor="let interest of sentInterests" class="interest-card">
+                <h4>{{ interest.interestedUserName }}</h4>
+                <p>Status: {{ interest.status }}</p>
+            </div>
+        </div>
+        <ng-template #noSentInterests>
+            <p>No interests sent.</p>
+        </ng-template>
+    </div>
+
+    <div class="received-interests">
+        <h3>Received Interests</h3>
+        <div *ngIf="receivedInterests.length > 0; else noReceivedInterests">
+            <div *ngFor="let interest of receivedInterests" class="interest-card">
+                <h4>{{ interest.userName }}</h4>
+                <p>Status: {{ interest.status }}</p>
+                <button (click)="updateInterest(interest.id, 'accepted')">Accept</button>
+                <button (click)="updateInterest(interest.id, 'declined')">Decline</button>
+            </div>
+        </div>
+        <ng-template #noReceivedInterests>
+            <p>No interests received.</p>
+        </ng-template>
+    </div>
+</div>

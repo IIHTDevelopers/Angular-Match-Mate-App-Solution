@@ -1,0 +1,51 @@
+<div class="sign-up-container">
+    <h2>Sign Up</h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" type="text" formControlName="name" />
+            <div *ngIf="signUpForm.get('name')?.invalid && signUpForm.get('name')?.touched">
+                Name is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" formControlName="email" />
+            <div *ngIf="signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched">
+                Enter a valid email
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" formControlName="password" />
+            <div *ngIf="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched">
+                Password is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="dateOfBirth">Date of Birth</label>
+            <input id="dateOfBirth" type="date" formControlName="dateOfBirth" />
+            <div *ngIf="signUpForm.get('dateOfBirth')?.invalid && signUpForm.get('dateOfBirth')?.touched">
+                Date of Birth is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" formControlName="gender">
+                <option value="" disabled>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <div *ngIf="signUpForm.get('gender')?.invalid && signUpForm.get('gender')?.touched">
+                Gender is required
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="signUpForm.invalid">Sign Up</button>
+    </form>
+</div>

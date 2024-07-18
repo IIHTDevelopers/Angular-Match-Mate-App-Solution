@@ -1,0 +1,15 @@
+<div class="match-recommendations-container">
+    <h2>Match Recommendations</h2>
+    <div *ngIf="matches.length > 0; else noMatches">
+        <div *ngFor="let match of matches" class="match-card">
+            <h3>{{ match.name }}</h3>
+            <p>Age: {{ match.age }}</p>
+            <p>Gender: {{ match.gender }}</p>
+            <p>Location: {{ match.location }}</p>
+            <button (click)="sendInterest(match.id)">Send Interest</button>
+        </div>
+    </div>
+    <ng-template #noMatches>
+        <p>No match recommendations available at the moment.</p>
+    </ng-template>
+</div>

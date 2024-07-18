@@ -1,0 +1,301 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "user1@example.com",
+      "password": "password1",
+      "role": "user",
+      "name": "John Doe",
+      "dateOfBirth": "1990-01-01",
+      "gender": "male",
+      "religion": "Christian",
+      "education": "Bachelor's Degree",
+      "occupation": "Software Engineer",
+      "age": 34,
+      "location": "New York",
+      "blockedUsers": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "email": "user2@example.com",
+      "password": "password2",
+      "role": "user",
+      "name": "Jane Smith",
+      "dateOfBirth": "1992-02-02",
+      "gender": "female",
+      "religion": "Hindu",
+      "education": "Master's Degree",
+      "occupation": "Doctor",
+      "age": 32,
+      "location": "Los Angeles",
+      "blockedUsers": [
+        5
+      ]
+    },
+    {
+      "id": 3,
+      "email": "user3@example.com",
+      "password": "password3",
+      "role": "user",
+      "name": "Alice Johnson",
+      "dateOfBirth": "1995-03-03",
+      "gender": "female",
+      "religion": "Muslim",
+      "education": "PhD",
+      "occupation": "Researcher",
+      "age": 29,
+      "location": "Chicago",
+      "blockedUsers": []
+    },
+    {
+      "id": 4,
+      "email": "user4@example.com",
+      "password": "password4",
+      "role": "user",
+      "name": "Bob Brown",
+      "dateOfBirth": "1988-04-04",
+      "gender": "male",
+      "religion": "Buddhist",
+      "education": "Bachelor's Degree",
+      "occupation": "Designer",
+      "age": 36,
+      "location": "Houston",
+      "blockedUsers": []
+    },
+    {
+      "id": 5,
+      "email": "user5@example.com",
+      "password": "password5",
+      "role": "user",
+      "name": "Charlie Davis",
+      "dateOfBirth": "1993-05-05",
+      "gender": "male",
+      "religion": "Jewish",
+      "education": "Master's Degree",
+      "occupation": "Architect",
+      "age": 31,
+      "location": "San Francisco",
+      "blockedUsers": []
+    }
+  ],
+  "profiles": [
+    {
+      "name": "John Doe",
+      "email": "user1@example.com",
+      "age": 34,
+      "gender": "male",
+      "location": "New York",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "name": "Jane Smith",
+      "age": 32,
+      "gender": "female",
+      "religion": "Hindu",
+      "caste": "Brahmin",
+      "location": "Los Angeles",
+      "profilePicture": "jane_smith.jpg",
+      "preferences": {
+        "ageRange": [
+          30,
+          40
+        ],
+        "religion": "Hindu",
+        "location": "California"
+      },
+      "privacySettings": {
+        "showProfile": true,
+        "showContactDetails": true
+      }
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "name": "Alice Johnson",
+      "age": 29,
+      "gender": "female",
+      "religion": "Muslim",
+      "caste": "N/A",
+      "location": "Chicago",
+      "profilePicture": "alice_johnson.jpg",
+      "preferences": {
+        "ageRange": [
+          25,
+          35
+        ],
+        "religion": "Muslim",
+        "location": "Illinois"
+      },
+      "privacySettings": {
+        "showProfile": true,
+        "showContactDetails": true
+      }
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "name": "Bob Brown",
+      "age": 36,
+      "gender": "male",
+      "religion": "Buddhist",
+      "caste": "N/A",
+      "location": "Houston",
+      "profilePicture": "bob_brown.jpg",
+      "preferences": {
+        "ageRange": [
+          30,
+          40
+        ],
+        "religion": "Buddhist",
+        "location": "Texas"
+      },
+      "privacySettings": {
+        "showProfile": true,
+        "showContactDetails": false
+      }
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "name": "Charlie Davis",
+      "age": 31,
+      "gender": "male",
+      "religion": "Jewish",
+      "caste": "N/A",
+      "location": "San Francisco",
+      "profilePicture": "charlie_davis.jpg",
+      "preferences": {
+        "ageRange": [
+          25,
+          35
+        ],
+        "religion": "Jewish",
+        "location": "California"
+      },
+      "privacySettings": {
+        "showProfile": true,
+        "showContactDetails": false
+      }
+    }
+  ],
+  "matches": [
+    {
+      "id": 1,
+      "userId": 1,
+      "matchedUserId": 2,
+      "matchScore": 85
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "matchedUserId": 3,
+      "matchScore": 75
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "matchedUserId": 1,
+      "matchScore": 85
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "matchedUserId": 4,
+      "matchScore": 90
+    },
+    {
+      "id": 5,
+      "userId": 4,
+      "matchedUserId": 5,
+      "matchScore": 80
+    }
+  ],
+  "interests": [
+    {
+      "id": 1,
+      "userId": 1,
+      "interestedUserId": 2,
+      "status": "sent"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "interestedUserId": 3,
+      "status": "accepted"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "interestedUserId": 4,
+      "status": "declined"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "interestedUserId": 5,
+      "status": "sent"
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "interestedUserId": 1,
+      "status": "received"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "senderId": 1,
+      "receiverId": 2,
+      "content": "Hello, how are you?",
+      "timestamp": "2023-07-16T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "senderId": 2,
+      "receiverId": 1,
+      "content": "I'm good, thank you!",
+      "timestamp": "2023-07-16T10:05:00Z"
+    },
+    {
+      "id": 3,
+      "senderId": 3,
+      "receiverId": 4,
+      "content": "Hi, nice to meet you!",
+      "timestamp": "2023-07-16T11:00:00Z"
+    },
+    {
+      "id": 4,
+      "senderId": 4,
+      "receiverId": 3,
+      "content": "Nice to meet you too!",
+      "timestamp": "2023-07-16T11:05:00Z"
+    },
+    {
+      "id": 5,
+      "senderId": 5,
+      "receiverId": 1,
+      "content": "Good morning!",
+      "timestamp": "2023-07-16T09:00:00Z"
+    },
+    {
+      "id": 6,
+      "senderId": 1,
+      "receiverId": 2,
+      "content": "qwer",
+      "timestamp": "2024-07-17T12:08:21.290Z"
+    },
+    {
+      "id": 7,
+      "senderId": 2,
+      "receiverId": 1,
+      "content": "qweqweqweqe",
+      "timestamp": "2024-07-17T12:39:02.145Z"
+    }
+  ]
+}

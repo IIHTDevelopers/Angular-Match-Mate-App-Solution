@@ -1,0 +1,16 @@
+<nav>
+    <ul>
+        <li *ngIf="!isLoggedIn"><a routerLink="/login">Login</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="/sign-up">Sign Up</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/profile">Profile</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/basic-search">Basic Search</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/advanced-search">Advanced Search</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/match-recommendations">Match Recommendations</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/interests">Interests</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/chat">Chat</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/block-report">Block/Report</a></li>
+        <li *ngIf="isLoggedIn" (click)="logout()">Logout</li>
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>
